@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1410032033 source:c:\dropbox\dropbox\cplusplus\expressionparser\expressionparser.cc
+	"ExpressionParser.hh"
+	<sstream>
+
+1410029760 c:\dropbox\dropbox\cplusplus\expressionparser\expressionparser.hh
+	<string>
+	<iostream>
+	<cstdlib>
+
+1410029992 source:c:\dropbox\dropbox\cplusplus\expressionparser\main.cpp
+	<iostream>
+	"ExpressionParser.hh"
+
