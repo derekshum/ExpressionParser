@@ -29,18 +29,21 @@ double ExpressionParser::Evaluate(string aExpression)
     aExpression.find(')')==string::npos){
 
     if(aExpression.find('-',1)==string::npos){
+      std::cout<<aExpression.c_str()<<" has no negative signs"<<std::endl;
       if(aExpression.find('+',1)==string::npos)return ConvertStringToDouble(aExpression);
       if(std::count(aExpression.begin()+1, aExpression.end(),'+')==1){
-        size_t find=aExpression.find('+');
+        size_t find=aExpression.find('+',1);
         if(aExpression[find-1]=='e'){
           if(isdigit(aExpression[find-2]) && isdigit(aExpression[find+1]))return ConvertStringToDouble(aExpression);
         }
       }
     }
     if(aExpression.find('+',1)==string::npos){
+      std::cout<<aExpression.c_str()<<" has no positive signs and "<< std::count(aExpression.begin()+1, aExpression.end(),'-')
+       <<" negative signs at position "<<aExpression.find('-',1) <<std::endl;
       if(aExpression.find('-',1)==string::npos)return ConvertStringToDouble(aExpression);
       if(std::count(aExpression.begin()+1, aExpression.end(),'-')==1){
-        size_t find=aExpression.find('-');
+        size_t find=aExpression.find('-',1);
         if(aExpression[find-1]=='e'){
           if(isdigit(aExpression[find-2]) && isdigit(aExpression[find+1]))return ConvertStringToDouble(aExpression);
         }
