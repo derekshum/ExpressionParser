@@ -14,7 +14,14 @@ class ExpressionParser
     virtual ~ExpressionParser();
     virtual double Evaluate(string aExpression);
     virtual double ConvertStringToDouble(string aExpression){
-      return atof(aExpression.c_str());
+      //check if the string contains any letters, if not, should be safe to cast to double
+      if(aExpression.find_first_of("abcdfghijklmnopqrstuvwxyzABCDFGHIJKLMNOPQRSTUVWXYZ")==string::npos)return atof(aExpression.c_str());
+
+      if(aExpression== "one")return 1.0;
+      else if(aExpression=="two")return 2.0;
+      else if(aExpression=="three") return 3.0;
+      else return 0.;
+
     }
     virtual void SearchReplace(std::string& str, const std::string& oldStr, const std::string& newStr)
     {
@@ -25,6 +32,7 @@ class ExpressionParser
         pos += newStr.length();
       }
     }
+
   protected:
   private:
 

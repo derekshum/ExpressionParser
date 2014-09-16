@@ -12,3 +12,33 @@
 	<iostream>
 	"ExpressionParser.hh"
 
+1410032033 source:c:\dropbox\dropbox\github\expressionparser\expressionparser.cc
+	"ExpressionParser.hh"
+	<sstream>
+
+1410479666 c:\dropbox\dropbox\github\expressionparser\expressionparser.hh
+	<string>
+	<iostream>
+	<cstdlib>
+
+1410032049 source:c:\dropbox\dropbox\github\expressionparser\main.cpp
+	<iostream>
+	"ExpressionParser.hh"
+
+1410879817 source:c:\data\dropbox\github\expressionparser\expressionparser.cc
+	"ExpressionParser.hh"
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<algorithm>
+
+1410877732 c:\data\dropbox\github\expressionparser\expressionparser.hh
+	<string>
+	<iostream>
+	<cstdlib>
+
+1410879929 source:c:\data\dropbox\github\expressionparser\main.cpp
+	<iostream>
+	"ExpressionParser.hh"
+
