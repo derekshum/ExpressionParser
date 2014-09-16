@@ -48,15 +48,6 @@ double ExpressionParser::Evaluate(string aExpression)
     }
   }
 
-/*
-  if(aExpression.find('+',1)==string::npos &&
-     aExpression.find('-',1)==string::npos &&
-     aExpression.find('*')==string::npos &&
-     aExpression.find('/')==string::npos &&
-     aExpression.find('(')==string::npos &&
-     aExpression.find(')')==string::npos
-      ) return ConvertStringToDouble(aExpression);*/
-
   //step 1: Evaluate expression in parentheses
   //Look for closing parenthesis, walk back to open parenthesis and evaluate that expression
   string theExpression=aExpression;

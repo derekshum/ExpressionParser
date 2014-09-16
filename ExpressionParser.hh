@@ -15,7 +15,8 @@ class ExpressionParser
     virtual double Evaluate(string aExpression);
     virtual double ConvertStringToDouble(string aExpression){
       //check if the string contains any letters, if not, should be safe to cast to double
-      if(aExpression.find_first_of("abcdfghijklmnopqrstuvwxyzABCDFGHIJKLMNOPQRSTUVWXYZ")==string::npos)return atof(aExpression.c_str());
+      //ignore the letter e; if it's by itself, it's likely an exponent
+      if(aExpression.find_first_of("abcdfghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")==string::npos)return atof(aExpression.c_str());
 
       if(aExpression== "one")return 1.0;
       else if(aExpression=="two")return 2.0;
