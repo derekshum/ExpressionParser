@@ -1,7 +1,8 @@
 
 #Specific to this project#
 ###################
-obj\
+obj\*
+bin\*
 
 #CodeBlocks files#
 ##################
